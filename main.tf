@@ -6,10 +6,10 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name = "StorageRG"
+    resource_group_name  = "StorageRG"
     storage_account_name = "taskboardstoragedim"
-    container_name = "taskboardstoragedimo"
-    key = "terraform.tfstate"
+    container_name       = "taskboardstoragedimo"
+    key                  = "terraform.tfstate"
   }
 }
 
@@ -89,5 +89,5 @@ resource "azurerm_app_service_source_control" "github" {
   app_id                 = azurerm_linux_web_app.alwa.id
   repo_url               = var.github_repo_url
   branch                 = "main"
-  use_manual_integration = false
+  use_manual_integration = true
 }
