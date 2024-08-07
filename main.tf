@@ -89,5 +89,5 @@ resource "azurerm_app_service_source_control" "github" {
   app_id                 = azurerm_linux_web_app.alwa.id
   repo_url               = var.github_repo_url
   branch                 = "main"
-  use_manual_integration = true
+  use_manual_integration = false
 }
