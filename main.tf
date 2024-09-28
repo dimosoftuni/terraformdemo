@@ -23,7 +23,7 @@ provider "azurerm" {
 
 resource "random_integer" "ri" {
   min = 10000
-  max = 99999
+  max = 99998
 }
 
 resource "azurerm_resource_group" "arg" {
